@@ -39,8 +39,9 @@ resource "aws_iam_role_policy" "revoke_keys_role_policy" {
   "Statement": [
     {
       "Action": [
-        "s3:*",
-        "ses:*"
+        "s3:GetObject",
+        "s3:GetObjectVersion",
+        "s3:ListBucket"
       ],
       "Effect": "Allow",
       "Resource": "*"
